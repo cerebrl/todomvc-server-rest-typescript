@@ -6,7 +6,7 @@ out
 gen
 .DS_Store
 node_modules/
-users/
+todos/
 system
 npm-debug.log
 

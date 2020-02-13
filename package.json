@@ -16,14 +16,14 @@
     "registry": "http://npm.com"
   },
   "scripts": {
-    "build": "npm run lint && npm run transpile",
+    "build": "npm run lint && tsc",
+    "dev": "tsc -w",
     "clean": "rm -rf node_modules && git clean -fX",
     "clean:data": "rm -rf users",
     "lint": "eslint '**/*.ts' --fix",
     "start": "NODE_ENV=production node app/index.server.js",
     "start:dev": "node app/index.server.js",
-    "test": "jest",
-    "transpile": "tsc"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -34,6 +34,7 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
+    "cors": "^2.8.5",
     "express": "^4.13.3",
     "history": "^1.17.0",
     "multer": "^1.1.0",
@@ -49,7 +50,8 @@
     "rxjs": "^6.5.2",
     "serve-favicon": "^2.3.0",
     "superagent": "^5.1.0",
-    "todomvc-app-css": "^2.0.0"
+    "todomvc-app-css": "^2.0.0",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "@types/async": "^3.0.0",

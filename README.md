@@ -8,7 +8,9 @@ This serves as a simple RESTful service for the other TodoMVC example applicatio
 
 [NOTE: Each linked commit below is be a working version of the application. Earlier versions, may have some bugs. Listed from latest to oldest.]
 
-- [ ] Tech: Clean up unneeded code and libraries, and reorganize files
+- [ ] Feature: Add multi-user capability
+- [ ] Feature: Convert from URL Query based update to request body update and Joi schema validation
+- [x] Tech: Clean up unneeded code and libraries, and reorganize files ([HEAD](https://github.com/cerebralideas/todomvc-server-rest-typescript))
 - [x] Tech: Roughly convert [Universal TodoMVC application](https://github.com/cerebralideas/todomvc-universal-react-pouchdb) to solely a RESTful service.
 
 ## Up and Running

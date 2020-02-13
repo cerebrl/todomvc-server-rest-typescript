@@ -1,11 +1,12 @@
 import { join } from 'path';
 import express from 'express';
+import cors from 'cors';
 import favicon from 'serve-favicon';
 import ReactEngine from 'react-engine';
 import expressView from 'react-engine/lib/expressView';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import routes from './routes/routes.server';
+import routes from './routes';
 
 let app = express();
 const PORT = 3000;
@@ -13,6 +14,11 @@ const PORT = 3000;
 // create the view engine with `react-engine`
 let engine = ReactEngine.server.create({});
 
+app.use(
+	cors({
+		origin: 'http://localhost:8000'
+	})
+);
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser()); // for parsing cookies
